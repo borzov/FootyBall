@@ -2,7 +2,7 @@ import type { BallState, World } from './types'
 import { integrate, resolveWalls } from './physics'
 import { drawBall } from './renderer'
 import { reportBall } from './bridge'
-import { FIXED_DT, MAX_FRAME_DT, RADIUS, REPORT_INTERVAL_MS } from './constants'
+import { FIXED_DT, MAX_FRAME_DT, RADIUS, HIT_RADIUS_FACTOR, REPORT_INTERVAL_MS } from './constants'
 
 export interface LoopHandle {
   getBall: () => BallState
@@ -43,7 +43,9 @@ export function startLoop(
 
     if (now - lastReport >= REPORT_INTERVAL_MS) {
       lastReport = now
-      void reportBall(ball.x, ball.y, RADIUS)
+      // Report the forgiving hit radius so the OS click-through zone matches
+      // the pointer hit-test (lets a moving ball be clicked mid-air).
+      void reportBall(ball.x, ball.y, RADIUS * HIT_RADIUS_FACTOR)
     }
 
     requestAnimationFrame(frame)
