@@ -1,16 +1,33 @@
 mod cursor;
+mod overlay;
+mod tray;
 
-// Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
+use cursor::{BallPos, BallState};
+use tauri::Manager;
+
+// Command: frontend reports the ball's current circle (CSS px, window-relative).
 #[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
+fn update_ball(state: tauri::State<BallState>, x: f64, y: f64, r: f64) {
+    let mut guard = state.0.lock().unwrap();
+    *guard = BallPos { x, y, r, valid: true };
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
-        .plugin(tauri_plugin_opener::init())
-        .invoke_handler(tauri::generate_handler![greet])
+        .plugin(tauri_plugin_autostart::init(
+            tauri_plugin_autostart::MacosLauncher::LaunchAgent,
+            None,
+        ))
+        .manage(BallState(std::sync::Mutex::new(BallPos::default())))
+        .invoke_handler(tauri::generate_handler![update_ball])
+        .setup(|app| {
+            let window = app.get_webview_window("main").expect("main window");
+            overlay::setup_overlay(&window)?;
+            tray::setup_tray(app)?;
+            cursor::spawn_cursor_loop(window);
+            Ok(())
+        })
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
