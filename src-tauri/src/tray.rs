@@ -22,7 +22,7 @@ pub fn setup_tray(app: &App) -> tauri::Result<()> {
         .build()?;
 
     TrayIconBuilder::with_id("main-tray")
-        .icon(app.default_window_icon().unwrap().clone())
+        .icon(app.default_window_icon().expect("app icon not configured").clone())
         .menu(&menu)
         .show_menu_on_left_click(true)
         .on_menu_event(move |app, event| match event.id().as_ref() {

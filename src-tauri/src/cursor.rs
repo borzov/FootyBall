@@ -24,7 +24,8 @@ pub fn is_cursor_on_ball(
 ) -> bool {
     let dx = cursor_x - ball_phys_x;
     let dy = cursor_y - ball_phys_y;
-    (dx * dx + dy * dy).sqrt() <= ball_phys_r
+    // Compare squared distances to avoid a sqrt.
+    dx * dx + dy * dy <= ball_phys_r * ball_phys_r
 }
 
 #[cfg(test)]
