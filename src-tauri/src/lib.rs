@@ -22,6 +22,10 @@ pub fn run() {
         .manage(BallState(std::sync::Mutex::new(BallPos::default())))
         .invoke_handler(tauri::generate_handler![update_ball])
         .setup(|app| {
+            // Run as a menubar/tray accessory app on macOS (no Dock icon).
+            #[cfg(target_os = "macos")]
+            let _ = app.set_activation_policy(tauri::ActivationPolicy::Accessory);
+
             let window = app.get_webview_window("main").expect("main window");
             overlay::setup_overlay(&window)?;
             tray::setup_tray(app)?;
