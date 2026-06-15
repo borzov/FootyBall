@@ -11,9 +11,19 @@
   },
   "app": {
     "withGlobalTauri": true,
+    "macOSPrivateApi": true,
     "windows": [
       {
-        "title": "football",
+        "label": "main",
+        "title": "Football",
+        "transparent": true,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "shadow": false,
+        "resizable": false,
+        "focus": false,
+        "fullscreen": false,
         "width": 800,
         "height": 600
       }
