@@ -21,9 +21,9 @@ pub fn setup_tray(app: &App) -> tauri::Result<()> {
         .items(&[&quit])
         .build()?;
 
+    // Title-only tray: the soccer-ball glyph is the menubar icon (no separate
+    // app-logo icon, which would show up as an extra item beside it).
     TrayIconBuilder::with_id("main-tray")
-        .icon(app.default_window_icon().expect("app icon not configured").clone())
-        .icon_as_template(true)
         .title("⚽")
         .tooltip("Football")
         .menu(&menu)
