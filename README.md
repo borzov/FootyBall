@@ -32,11 +32,7 @@ screen, and a quick moment of fun between tasks.
 
 Grab the latest build from the **[Releases page](https://github.com/borzov/FootyBall/releases/latest)** and pick your platform.
 
-<table>
-<tr>
-<td valign="top" width="33%">
-
-### <img src="https://img.shields.io/badge/-Apple-000000?logo=apple&logoColor=white" height="20"/> macOS
+### 🍎 macOS
 
 1. Download the `.dmg` and drag **FootyBall** to Applications.
 2. The app isn't notarized yet, so macOS may say it "can't be opened" or offer to
@@ -47,27 +43,17 @@ Grab the latest build from the **[Releases page](https://github.com/borzov/Footy
      xattr -dr com.apple.quarantine /Applications/FootyBall.app
      ```
 
-</td>
-<td valign="top" width="33%">
-
-### <img src="https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white" height="20"/> Windows
+### 🪟 Windows
 
 1. Download the `*-setup.exe` (or the `.msi`) and run it.
 2. SmartScreen may warn ("Windows protected your PC") because the build isn't
    signed yet — click **More info → Run anyway**.
 
-</td>
-<td valign="top" width="33%">
-
-### <img src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black" height="20"/> Linux
+### 🐧 Linux
 
 - **AppImage:** `chmod +x FootyBall_*.AppImage` then run it.
 - **Debian/Ubuntu:** install the `.deb`.
 - **Fedora/RHEL:** install the `.rpm`.
-
-</td>
-</tr>
-</table>
 
 ## 🎮 How to play
 
