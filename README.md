@@ -22,6 +22,12 @@ gravity, spin, and all. When you're done, it tucks away quietly in your menu bar
 (or system tray) and stays out of the way. Clicks pass straight through to whatever
 you're working on; only the ball reacts.
 
+<div align="center">
+
+https://github.com/borzov/FootyBall/raw/master/docs/footyball-demo.mp4
+
+</div>
+
 No accounts. No clutter. No distractions you didn't ask for. Just a ball, your
 screen, and a quick moment of fun between tasks.
 
