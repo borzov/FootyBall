@@ -24,7 +24,7 @@ you're working on; only the ball reacts.
 
 <div align="center">
 
-<video src="https://github.com/borzov/FootyBall/raw/master/docs/footyball-demo.mp4" controls muted loop width="700"></video>
+https://github.com/user-attachments/assets/b066a42d-06a4-48f6-b4c7-82f4a55c9115
 
 </div>
 
