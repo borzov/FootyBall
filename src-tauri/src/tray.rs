@@ -25,7 +25,7 @@ pub fn setup_tray(app: &App) -> tauri::Result<()> {
     // app-logo icon, which would show up as an extra item beside it).
     TrayIconBuilder::with_id("main-tray")
         .title("⚽")
-        .tooltip("Football")
+        .tooltip("FootyBall")
         .menu(&menu)
         .show_menu_on_left_click(true)
         .on_menu_event(move |app, event| match event.id().as_ref() {
