@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>FootyBall — ball designs</title>
+<style>
+  body { margin:0; font:16px/1.5 -apple-system,system-ui,sans-serif;
+         background:#1b1f24; color:#e9edf1; }
+  header { padding:32px 24px 8px; text-align:center; }
+  header h1 { margin:0; font-size:24px; }
+  header p { margin:6px 0 0; color:#9aa4ad; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+           gap:20px; padding:28px; max-width:1100px; margin:0 auto; }
+  figure { margin:0; background:#262c33; border-radius:16px; padding:18px;
+            text-align:center; box-shadow:0 6px 20px rgba(0,0,0,.3); }
+  .ball svg { width:180px; height:180px; }
+  figcaption { margin-top:8px; font-weight:600; letter-spacing:.2px; }
+  .light .grid figure { background:#fff; }
+  .toggle { display:block; margin:0 auto; }
+</style></head>
+<body>
+<header>
+  <h1>⚽ FootyBall — 6 ball designs</h1>
+  <p>Realistic vector balls with soft shadow. Pick the ones you like.</p>
+  <button class="toggle" onclick="document.body.classList.toggle('light')">
+    Toggle background</button>
+</header>
+<section class="grid">
+    <figure><div class="ball"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <clipPath id="clip_classic"><circle cx="110.00" cy="102.00" r="80.00"/></clipPath>
+      <filter id="softshadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+
+    <radialGradient id="rim_classic" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="62%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#000" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.34"/>
+    </radialGradient>
+    <radialGradient id="hi_classic" cx="34%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.92)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="110.00" cy="191.00" rx="65.60" ry="9.5" fill="rgba(0,0,0,0.20)" filter="url(#softshadow)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="white"/>
+  <g clip-path="url(#clip_classic)">
+      <path d="M 110.00,74.80 L 135.87,93.59 L 125.99,124.01 L 94.01,124.01 L 84.13,93.59 Z" fill="#1d1d1d"/>
+      <path d="M 110.00,60.40 L 85.65,42.71 L 94.95,14.09 L 125.05,14.09 L 134.35,42.71 Z" fill="#1d1d1d"/>
+      <line x1="110.00" y1="74.80" x2="110.00" y2="34.80" stroke="#454545" stroke-width="1.6"/>
+      <path d="M 149.56,89.14 L 158.86,60.52 L 188.96,60.52 L 198.26,89.14 L 173.91,106.83 Z" fill="#1d1d1d"/>
+      <line x1="135.87" y1="93.59" x2="173.91" y2="81.23" stroke="#454545" stroke-width="1.6"/>
+      <path d="M 134.45,135.66 L 164.55,135.66 L 173.85,164.28 L 149.50,181.97 L 125.15,164.28 Z" fill="#1d1d1d"/>
+      <line x1="125.99" y1="124.01" x2="149.50" y2="156.37" stroke="#454545" stroke-width="1.6"/>
+      <path d="M 85.55,135.66 L 94.85,164.28 L 70.50,181.97 L 46.15,164.28 L 55.45,135.66 Z" fill="#1d1d1d"/>
+      <line x1="94.01" y1="124.01" x2="70.50" y2="156.37" stroke="#454545" stroke-width="1.6"/>
+      <path d="M 70.44,89.14 L 46.09,106.83 L 21.74,89.14 L 31.04,60.52 L 61.14,60.52 Z" fill="#1d1d1d"/>
+      <line x1="84.13" y1="93.59" x2="46.09" y2="81.23" stroke="#454545" stroke-width="1.6"/>
+  </g>
+
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#hi_classic)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#rim_classic)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="none"
+          stroke="rgba(0,0,0,0.28)" stroke-width="1.4"/>
+</svg>
+</div><figcaption>Classic</figcaption></figure>
+    <figure><div class="ball"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <clipPath id="clip_trionda"><circle cx="110.00" cy="102.00" r="80.00"/></clipPath>
+      <filter id="softshadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+
+    <radialGradient id="rim_trionda" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="62%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#000" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.34"/>
+    </radialGradient>
+    <radialGradient id="hi_trionda" cx="34%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.92)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="tri_base" cx="36%" cy="30%" r="78%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e2e7ec"/></radialGradient>
+  </defs>
+  <ellipse cx="110.00" cy="191.00" rx="65.60" ry="9.5" fill="rgba(0,0,0,0.20)" filter="url(#softshadow)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#tri_base)"/>
+  <g clip-path="url(#clip_trionda)">
+      <g transform="translate(110.00,102.00) rotate(-74)"><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="#2f6fd6"/><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="none" stroke="#e8bf57" stroke-width="1.8"/><path d="M 50.00,-13.60 L 51.14,-10.56 L 54.37,-10.42 L 51.84,-8.40 L 52.70,-5.28 L 50.00,-7.07 L 47.30,-5.28 L 48.16,-8.40 L 45.63,-10.42 L 48.86,-10.56 Z" fill="#eaf2ff" fill-opacity="0.95"/><path d="M 63.00,-2.80 L 63.94,-0.29 L 66.61,-0.17 L 64.52,1.49 L 65.23,4.07 L 63.00,2.60 L 60.77,4.07 L 61.48,1.49 L 59.39,-0.17 L 62.06,-0.29 Z" fill="#eaf2ff" fill-opacity="0.95"/><path d="M 49.00,5.80 L 49.79,7.91 L 52.04,8.01 L 50.28,9.42 L 50.88,11.59 L 49.00,10.34 L 47.12,11.59 L 47.72,9.42 L 45.96,8.01 L 48.21,7.91 Z" fill="#eaf2ff" fill-opacity="0.95"/></g>
+      <g transform="translate(110.00,102.00) rotate(46)"><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="#d8332f"/><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="none" stroke="#e8bf57" stroke-width="1.8"/><path d="M 0,-10 L 1.6,-4 L 7,-6 L 4.5,-1 L 9,1 L 4,2 L 5,7 L 1,4 L 0,9 L -1,4 L -5,7 L -4,2 L -9,1 L -4.5,-1 L -7,-6 L -1.6,-4 Z" fill="#ffffff" fill-opacity="0.95" transform="translate(60.00,2.00) scale(2.0) rotate(90)"/></g>
+      <g transform="translate(110.00,102.00) rotate(166)"><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="#1f9d57"/><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="none" stroke="#e8bf57" stroke-width="1.8"/></g>
+  </g>
+
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#hi_trionda)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#rim_trionda)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="none"
+          stroke="rgba(0,0,0,0.28)" stroke-width="1.4"/>
+</svg>
+</div><figcaption>World Cup 2026</figcaption></figure>
+    <figure><div class="ball"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <clipPath id="clip_retro"><circle cx="110.00" cy="102.00" r="80.00"/></clipPath>
+      <filter id="softshadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+
+    <radialGradient id="rim_retro" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="62%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#000" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.34"/>
+    </radialGradient>
+    <radialGradient id="hi_retro" cx="34%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.92)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="leather" cx="36%" cy="30%" r="75%"><stop offset="0%" stop-color="#e7c690"/><stop offset="100%" stop-color="#c79a5c"/></radialGradient>
+  </defs>
+  <ellipse cx="110.00" cy="191.00" rx="65.60" ry="9.5" fill="rgba(0,0,0,0.20)" filter="url(#softshadow)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#leather)"/>
+  <g clip-path="url(#clip_retro)">
+      <path d="M 110.00,74.80 L 135.87,93.59 L 125.99,124.01 L 94.01,124.01 L 84.13,93.59 Z" fill="#5a3b22"/>
+      <path d="M 110.00,60.40 L 85.65,42.71 L 94.95,14.09 L 125.05,14.09 L 134.35,42.71 Z" fill="#5a3b22"/>
+      <line x1="110.00" y1="74.80" x2="110.00" y2="34.80" stroke="#e9d4a8" stroke-width="1.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+      <path d="M 149.56,89.14 L 158.86,60.52 L 188.96,60.52 L 198.26,89.14 L 173.91,106.83 Z" fill="#5a3b22"/>
+      <line x1="135.87" y1="93.59" x2="173.91" y2="81.23" stroke="#e9d4a8" stroke-width="1.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+      <path d="M 134.45,135.66 L 164.55,135.66 L 173.85,164.28 L 149.50,181.97 L 125.15,164.28 Z" fill="#5a3b22"/>
+      <line x1="125.99" y1="124.01" x2="149.50" y2="156.37" stroke="#e9d4a8" stroke-width="1.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+      <path d="M 85.55,135.66 L 94.85,164.28 L 70.50,181.97 L 46.15,164.28 L 55.45,135.66 Z" fill="#5a3b22"/>
+      <line x1="94.01" y1="124.01" x2="70.50" y2="156.37" stroke="#e9d4a8" stroke-width="1.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+      <path d="M 70.44,89.14 L 46.09,106.83 L 21.74,89.14 L 31.04,60.52 L 61.14,60.52 Z" fill="#5a3b22"/>
+      <line x1="84.13" y1="93.59" x2="46.09" y2="81.23" stroke="#e9d4a8" stroke-width="1.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+  </g>
+
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#hi_retro)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#rim_retro)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="none"
+          stroke="rgba(0,0,0,0.28)" stroke-width="1.4"/>
+</svg>
+</div><figcaption>Retro Leather</figcaption></figure>
+    <figure><div class="ball"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <clipPath id="clip_redsport"><circle cx="110.00" cy="102.00" r="80.00"/></clipPath>
+      <filter id="softshadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+
+    <radialGradient id="rim_redsport" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="62%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#000" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.34"/>
+    </radialGradient>
+    <radialGradient id="hi_redsport" cx="34%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.92)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="rs_base" cx="36%" cy="30%" r="78%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e6e9ec"/></radialGradient>
+  </defs>
+  <ellipse cx="110.00" cy="191.00" rx="65.60" ry="9.5" fill="rgba(0,0,0,0.20)" filter="url(#softshadow)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#rs_base)"/>
+  <g clip-path="url(#clip_redsport)">
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#d62828" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(0)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(-7)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#d62828" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(120)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(113)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#d62828" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(240)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(233)"/>
+      <circle cx="110.00" cy="102.00" r="7" fill="#d62828"/>
+  </g>
+
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#hi_redsport)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#rim_redsport)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="none"
+          stroke="rgba(0,0,0,0.28)" stroke-width="1.4"/>
+</svg>
+</div><figcaption>Red-White Sport</figcaption></figure>
+    <figure><div class="ball"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <clipPath id="clip_neon"><circle cx="110.00" cy="102.00" r="80.00"/></clipPath>
+      <filter id="softshadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+
+    <radialGradient id="rim_neon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="62%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#000" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.34"/>
+    </radialGradient>
+    <radialGradient id="hi_neon" cx="34%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.92)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="charcoal" cx="36%" cy="30%" r="80%"><stop offset="0%" stop-color="#2c3338"/><stop offset="100%" stop-color="#0a0e10"/></radialGradient><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="110.00" cy="191.00" rx="65.60" ry="9.5" fill="rgba(0,0,0,0.20)" filter="url(#softshadow)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#charcoal)"/>
+  <g clip-path="url(#clip_neon)">
+      <path d="M 110.00,74.80 L 135.87,93.59 L 125.99,124.01 L 94.01,124.01 L 84.13,93.59 Z" fill="#10312c" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <path d="M 110.00,60.40 L 85.65,42.71 L 94.95,14.09 L 125.05,14.09 L 134.35,42.71 Z" fill="#10312c" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <line x1="110.00" y1="74.80" x2="110.00" y2="34.80" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <path d="M 149.56,89.14 L 158.86,60.52 L 188.96,60.52 L 198.26,89.14 L 173.91,106.83 Z" fill="#10312c" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <line x1="135.87" y1="93.59" x2="173.91" y2="81.23" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <path d="M 134.45,135.66 L 164.55,135.66 L 173.85,164.28 L 149.50,181.97 L 125.15,164.28 Z" fill="#10312c" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <line x1="125.99" y1="124.01" x2="149.50" y2="156.37" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <path d="M 85.55,135.66 L 94.85,164.28 L 70.50,181.97 L 46.15,164.28 L 55.45,135.66 Z" fill="#10312c" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <line x1="94.01" y1="124.01" x2="70.50" y2="156.37" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <path d="M 70.44,89.14 L 46.09,106.83 L 21.74,89.14 L 31.04,60.52 L 61.14,60.52 Z" fill="#10312c" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+      <line x1="84.13" y1="93.59" x2="46.09" y2="81.23" stroke="#1ef0c8" stroke-width="2" filter="url(#glow)"/>
+  </g>
+
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#hi_neon)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#rim_neon)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="none"
+          stroke="rgba(0,0,0,0.28)" stroke-width="1.4"/>
+</svg>
+</div><figcaption>Neon Night</figcaption></figure>
+    <figure><div class="ball"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <clipPath id="clip_gold"><circle cx="110.00" cy="102.00" r="80.00"/></clipPath>
+      <filter id="softshadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+
+    <radialGradient id="rim_gold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="62%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#000" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.34"/>
+    </radialGradient>
+    <radialGradient id="hi_gold" cx="34%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.92)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="blacksphere" cx="36%" cy="30%" r="78%"><stop offset="0%" stop-color="#3a3a3d"/><stop offset="100%" stop-color="#0c0c0e"/></radialGradient><linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fdf0b2"/><stop offset="45%" stop-color="#e8b54b"/><stop offset="100%" stop-color="#a9772a"/></linearGradient>
+  </defs>
+  <ellipse cx="110.00" cy="191.00" rx="65.60" ry="9.5" fill="rgba(0,0,0,0.20)" filter="url(#softshadow)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#blacksphere)"/>
+  <g clip-path="url(#clip_gold)">
+      <path d="M 110.00,74.80 L 135.87,93.59 L 125.99,124.01 L 94.01,124.01 L 84.13,93.59 Z" fill="url(#gold)"/>
+      <path d="M 110.00,60.40 L 85.65,42.71 L 94.95,14.09 L 125.05,14.09 L 134.35,42.71 Z" fill="url(#gold)"/>
+      <line x1="110.00" y1="74.80" x2="110.00" y2="34.80" stroke="#a9842f" stroke-width="1.6"/>
+      <path d="M 149.56,89.14 L 158.86,60.52 L 188.96,60.52 L 198.26,89.14 L 173.91,106.83 Z" fill="url(#gold)"/>
+      <line x1="135.87" y1="93.59" x2="173.91" y2="81.23" stroke="#a9842f" stroke-width="1.6"/>
+      <path d="M 134.45,135.66 L 164.55,135.66 L 173.85,164.28 L 149.50,181.97 L 125.15,164.28 Z" fill="url(#gold)"/>
+      <line x1="125.99" y1="124.01" x2="149.50" y2="156.37" stroke="#a9842f" stroke-width="1.6"/>
+      <path d="M 85.55,135.66 L 94.85,164.28 L 70.50,181.97 L 46.15,164.28 L 55.45,135.66 Z" fill="url(#gold)"/>
+      <line x1="94.01" y1="124.01" x2="70.50" y2="156.37" stroke="#a9842f" stroke-width="1.6"/>
+      <path d="M 70.44,89.14 L 46.09,106.83 L 21.74,89.14 L 31.04,60.52 L 61.14,60.52 Z" fill="url(#gold)"/>
+      <line x1="84.13" y1="93.59" x2="46.09" y2="81.23" stroke="#a9842f" stroke-width="1.6"/>
+  </g>
+
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#hi_gold)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#rim_gold)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="none"
+          stroke="rgba(0,0,0,0.28)" stroke-width="1.4"/>
+</svg>
+</div><figcaption>Gold Edition</figcaption></figure>
+</section>
+</body></html>

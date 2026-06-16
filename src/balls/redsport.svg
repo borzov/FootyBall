@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs><clipPath id="skc_redsport"><circle cx="100" cy="100" r="100"/></clipPath><radialGradient id="rs_base" cx="36%" cy="30%" r="78%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e6e9ec"/></radialGradient></defs>
+  <g clip-path="url(#skc_redsport)">
+    <g transform="translate(100,100) scale(1.25) translate(-110,-102)">
+      <circle cx="110.00" cy="102.00" r="80.00" fill="#f2f4f6"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#d62828" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(0)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(-7)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#d62828" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(120)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(113)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#d62828" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(240)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(233)"/>
+      <circle cx="110.00" cy="102.00" r="7" fill="#d62828"/>
+    </g>
+  </g>
+</svg>

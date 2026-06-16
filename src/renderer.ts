@@ -1,4 +1,5 @@
 import type { BallState } from './types'
+import type { Skin } from './skins'
 import { RADIUS } from './constants'
 
 // Draws a filled regular pentagon centered at (cx, cy) with circumradius r,
@@ -24,16 +25,81 @@ function fillPentagon(
   ctx.fill()
 }
 
-// Draws a realistic soccer ball: a shaded white sphere with the classic
-// black-pentagon pattern. Lighting is fixed in screen space (top-left
-// highlight); the seam pattern rotates with ball.angle so spin is visible.
+// Draws the ball for the current frame. If the selected skin's image is ready,
+// the skin (any of the user-pickable designs) is drawn spinning under fixed
+// lighting; otherwise we fall back to the procedural classic so the ball is
+// never blank while a skin decodes.
 export function drawBall(
   ctx: CanvasRenderingContext2D,
   ball: BallState,
   world: { width: number; height: number },
+  skin?: Skin,
 ): void {
   ctx.clearRect(0, 0, world.width, world.height)
+  if (skin && skin.loaded) drawSkinnedBall(ctx, ball, skin.img)
+  else drawClassicBall(ctx, ball)
+}
 
+// Draws a skin: the flat design spins with ball.angle inside the ball
+// silhouette, then a fixed top-left highlight + rim darkening give it the
+// rounded, lit-in-place look (so the shine stays put as the ball rolls).
+function drawSkinnedBall(
+  ctx: CanvasRenderingContext2D,
+  ball: BallState,
+  img: CanvasImageSource,
+): void {
+  ctx.save()
+  ctx.translate(ball.x, ball.y)
+
+  ctx.beginPath()
+  ctx.arc(0, 0, RADIUS, 0, Math.PI * 2)
+  ctx.clip()
+
+  // Rotating design (the skin SVG fills a square whose inscribed circle is the
+  // ball, so it maps cleanly to [-RADIUS, RADIUS]).
+  ctx.save()
+  ctx.rotate(ball.angle)
+  ctx.drawImage(img, -RADIUS, -RADIUS, RADIUS * 2, RADIUS * 2)
+  ctx.restore()
+
+  // Fixed specular highlight (top-left).
+  const hi = ctx.createRadialGradient(
+    -RADIUS * 0.3, -RADIUS * 0.4, RADIUS * 0.05,
+    -RADIUS * 0.3, -RADIUS * 0.4, RADIUS * 1.25,
+  )
+  hi.addColorStop(0, 'rgba(255,255,255,0.5)')
+  hi.addColorStop(0.4, 'rgba(255,255,255,0.12)')
+  hi.addColorStop(1, 'rgba(255,255,255,0)')
+  ctx.fillStyle = hi
+  ctx.fillRect(-RADIUS, -RADIUS, RADIUS * 2, RADIUS * 2)
+
+  // Fixed rim darkening for sphere roundness.
+  const rim = ctx.createRadialGradient(0, 0, RADIUS * 0.6, 0, 0, RADIUS)
+  rim.addColorStop(0, 'rgba(0,0,0,0)')
+  rim.addColorStop(1, 'rgba(0,0,0,0.28)')
+  ctx.fillStyle = rim
+  ctx.fillRect(-RADIUS, -RADIUS, RADIUS * 2, RADIUS * 2)
+
+  ctx.restore() // undo clip + translate
+
+  // Outline (fixed, not rotated).
+  ctx.save()
+  ctx.translate(ball.x, ball.y)
+  ctx.beginPath()
+  ctx.arc(0, 0, RADIUS, 0, Math.PI * 2)
+  ctx.lineWidth = 1.5
+  ctx.strokeStyle = 'rgba(0,0,0,0.3)'
+  ctx.stroke()
+  ctx.restore()
+}
+
+// Procedural fallback: a shaded white sphere with the classic black-pentagon
+// pattern. Lighting is fixed in screen space (top-left highlight); the seam
+// pattern rotates with ball.angle so spin is visible.
+function drawClassicBall(
+  ctx: CanvasRenderingContext2D,
+  ball: BallState,
+): void {
   ctx.save()
   ctx.translate(ball.x, ball.y)
 

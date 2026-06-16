@@ -20,7 +20,7 @@ pub fn run() {
             None,
         ))
         .manage(BallState(std::sync::Mutex::new(BallPos::default())))
-        .invoke_handler(tauri::generate_handler![update_ball])
+        .invoke_handler(tauri::generate_handler![update_ball, tray::sync_ball_menu])
         .setup(|app| {
             // Run as a menubar/tray accessory app on macOS (no Dock icon).
             #[cfg(target_os = "macos")]

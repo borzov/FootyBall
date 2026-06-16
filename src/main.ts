@@ -1,6 +1,7 @@
 import './styles.css'
 import { createBall, applyKick } from './ball'
 import { startLoop } from './loop'
+import { initBallSelection, currentSkin } from './ballSelection'
 import { RADIUS, HIT_RADIUS_FACTOR } from './constants'
 import type { World } from './types'
 
@@ -20,8 +21,10 @@ function resizeCanvas() {
 
 resizeCanvas()
 
+initBallSelection()
+
 const world = currentWorld()
-const handle = startLoop(ctx, createBall(world), world)
+const handle = startLoop(ctx, createBall(world), world, currentSkin)
 
 canvas.addEventListener('pointerdown', (e) => {
   const ball = handle.getBall()

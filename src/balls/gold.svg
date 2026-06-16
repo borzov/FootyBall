@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs><clipPath id="skc_gold"><circle cx="100" cy="100" r="100"/></clipPath><radialGradient id="blacksphere" cx="36%" cy="30%" r="78%"><stop offset="0%" stop-color="#3a3a3d"/><stop offset="100%" stop-color="#0c0c0e"/></radialGradient><linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fdf0b2"/><stop offset="45%" stop-color="#e8b54b"/><stop offset="100%" stop-color="#a9772a"/></linearGradient></defs>
+  <g clip-path="url(#skc_gold)">
+    <g transform="translate(100,100) scale(1.25) translate(-110,-102)">
+      <circle cx="110.00" cy="102.00" r="80.00" fill="#17171a"/>
+      <path d="M 110.00,74.80 L 135.87,93.59 L 125.99,124.01 L 94.01,124.01 L 84.13,93.59 Z" fill="url(#gold)"/>
+      <path d="M 110.00,60.40 L 85.65,42.71 L 94.95,14.09 L 125.05,14.09 L 134.35,42.71 Z" fill="url(#gold)"/>
+      <line x1="110.00" y1="74.80" x2="110.00" y2="34.80" stroke="#a9842f" stroke-width="1.6"/>
+      <path d="M 149.56,89.14 L 158.86,60.52 L 188.96,60.52 L 198.26,89.14 L 173.91,106.83 Z" fill="url(#gold)"/>
+      <line x1="135.87" y1="93.59" x2="173.91" y2="81.23" stroke="#a9842f" stroke-width="1.6"/>
+      <path d="M 134.45,135.66 L 164.55,135.66 L 173.85,164.28 L 149.50,181.97 L 125.15,164.28 Z" fill="url(#gold)"/>
+      <line x1="125.99" y1="124.01" x2="149.50" y2="156.37" stroke="#a9842f" stroke-width="1.6"/>
+      <path d="M 85.55,135.66 L 94.85,164.28 L 70.50,181.97 L 46.15,164.28 L 55.45,135.66 Z" fill="url(#gold)"/>
+      <line x1="94.01" y1="124.01" x2="70.50" y2="156.37" stroke="#a9842f" stroke-width="1.6"/>
+      <path d="M 70.44,89.14 L 46.09,106.83 L 21.74,89.14 L 31.04,60.52 L 61.14,60.52 Z" fill="url(#gold)"/>
+      <line x1="84.13" y1="93.59" x2="46.09" y2="81.23" stroke="#a9842f" stroke-width="1.6"/>
+    </g>
+  </g>
+</svg>

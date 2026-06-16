@@ -1,4 +1,5 @@
 import type { BallState, World } from './types'
+import type { Skin } from './skins'
 import { integrate, resolveWalls } from './physics'
 import { drawBall } from './renderer'
 import { reportBall } from './bridge'
@@ -18,6 +19,7 @@ export function startLoop(
   ctx: CanvasRenderingContext2D,
   initialBall: BallState,
   initialWorld: World,
+  getSkin?: () => Skin,
 ): LoopHandle {
   let ball = initialBall
   let world = initialWorld
@@ -39,7 +41,7 @@ export function startLoop(
       acc -= FIXED_DT
     }
 
-    drawBall(ctx, ball, world)
+    drawBall(ctx, ball, world, getSkin?.())
 
     if (now - lastReport >= REPORT_INTERVAL_MS) {
       lastReport = now

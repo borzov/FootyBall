@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs><clipPath id="skc_trionda"><circle cx="100" cy="100" r="100"/></clipPath><radialGradient id="tri_base" cx="36%" cy="30%" r="78%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e2e7ec"/></radialGradient></defs>
+  <g clip-path="url(#skc_trionda)">
+    <g transform="translate(100,100) scale(1.25) translate(-110,-102)">
+      <circle cx="110.00" cy="102.00" r="80.00" fill="#f5f6f8"/>
+      <g transform="translate(110.00,102.00) rotate(-74)"><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="#2f6fd6"/><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="none" stroke="#e8bf57" stroke-width="1.8"/><path d="M 50.00,-13.60 L 51.14,-10.56 L 54.37,-10.42 L 51.84,-8.40 L 52.70,-5.28 L 50.00,-7.07 L 47.30,-5.28 L 48.16,-8.40 L 45.63,-10.42 L 48.86,-10.56 Z" fill="#eaf2ff" fill-opacity="0.95"/><path d="M 63.00,-2.80 L 63.94,-0.29 L 66.61,-0.17 L 64.52,1.49 L 65.23,4.07 L 63.00,2.60 L 60.77,4.07 L 61.48,1.49 L 59.39,-0.17 L 62.06,-0.29 Z" fill="#eaf2ff" fill-opacity="0.95"/><path d="M 49.00,5.80 L 49.79,7.91 L 52.04,8.01 L 50.28,9.42 L 50.88,11.59 L 49.00,10.34 L 47.12,11.59 L 47.72,9.42 L 45.96,8.01 L 48.21,7.91 Z" fill="#eaf2ff" fill-opacity="0.95"/></g>
+      <g transform="translate(110.00,102.00) rotate(46)"><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="#d8332f"/><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="none" stroke="#e8bf57" stroke-width="1.8"/><path d="M 0,-10 L 1.6,-4 L 7,-6 L 4.5,-1 L 9,1 L 4,2 L 5,7 L 1,4 L 0,9 L -1,4 L -5,7 L -4,2 L -9,1 L -4.5,-1 L -7,-6 L -1.6,-4 Z" fill="#ffffff" fill-opacity="0.95" transform="translate(60.00,2.00) scale(2.0) rotate(90)"/></g>
+      <g transform="translate(110.00,102.00) rotate(166)"><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="#1f9d57"/><path d="M 0,0 C 22,-24 58,-27 73,-11 C 81,-3 79,10 64,17 C 45,26 18,17 0,0 Z" fill="none" stroke="#e8bf57" stroke-width="1.8"/></g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
+  <defs>
+    <clipPath id="clip_redsport"><circle cx="110.00" cy="102.00" r="80.00"/></clipPath>
+      <filter id="softshadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+
+    <radialGradient id="rim_redsport" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="62%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#000" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.34"/>
+    </radialGradient>
+    <radialGradient id="hi_redsport" cx="34%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.92)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="rs_base" cx="36%" cy="30%" r="78%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e6e9ec"/></radialGradient>
+  </defs>
+  <ellipse cx="110.00" cy="191.00" rx="65.60" ry="9.5" fill="rgba(0,0,0,0.20)" filter="url(#softshadow)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#rs_base)"/>
+  <g clip-path="url(#clip_redsport)">
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#d62828" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(0)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(-7)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#d62828" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(120)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(113)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#d62828" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(240)"/>
+      <path d="M 4,-4 C -20,-10 -30,-32 -20,-54 C -13,-69 12,-68 24,-52" fill="none" stroke="#2a2a2a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(110.00,102.00) rotate(233)"/>
+      <circle cx="110.00" cy="102.00" r="7" fill="#d62828"/>
+  </g>
+
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#hi_redsport)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="url(#rim_redsport)"/>
+  <circle cx="110.00" cy="102.00" r="80.00" fill="none"
+          stroke="rgba(0,0,0,0.28)" stroke-width="1.4"/>
+</svg>

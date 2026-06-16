@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>FootyBall — canvas render test</title>
+<style>
+  body { margin:0; background:#2a3f1e; font:14px system-ui,sans-serif; color:#fff; }
+  h1 { text-align:center; padding:16px; margin:0; font-size:18px; }
+  .row { display:flex; flex-wrap:wrap; gap:24px; justify-content:center; padding:16px; }
+  figure { margin:0; text-align:center; }
+  canvas { background:rgba(255,255,255,0.04); border-radius:8px; }
+  figcaption { margin-top:6px; }
+</style></head>
+<body>
+<h1>Canvas render (spinning skin + fixed lighting) — mirrors the in-app renderer</h1>
+<div class="row" id="row"></div>
+<script type="module">
+  const IDS = ['classic','trionda','retro','redsport','neon','gold']
+  const R = 64               // bigger than in-app (32) to inspect quality
+  const ANGLES = [0, 0.9, 1.9]  // a few spin angles per ball
+
+  function drawSkinned(ctx, cx, cy, img, angle) {
+    ctx.save()
+    ctx.translate(cx, cy)
+    ctx.beginPath(); ctx.arc(0,0,R,0,Math.PI*2); ctx.clip()
+    ctx.save(); ctx.rotate(angle)
+    ctx.drawImage(img, -R, -R, R*2, R*2)
+    ctx.restore()
+    const hi = ctx.createRadialGradient(-R*0.3,-R*0.4,R*0.05, -R*0.3,-R*0.4,R*1.25)
+    hi.addColorStop(0,'rgba(255,255,255,0.5)'); hi.addColorStop(0.4,'rgba(255,255,255,0.12)'); hi.addColorStop(1,'rgba(255,255,255,0)')
+    ctx.fillStyle = hi; ctx.fillRect(-R,-R,R*2,R*2)
+    const rim = ctx.createRadialGradient(0,0,R*0.6, 0,0,R)
+    rim.addColorStop(0,'rgba(0,0,0,0)'); rim.addColorStop(1,'rgba(0,0,0,0.28)')
+    ctx.fillStyle = rim; ctx.fillRect(-R,-R,R*2,R*2)
+    ctx.restore()
+    ctx.save(); ctx.translate(cx,cy)
+    ctx.beginPath(); ctx.arc(0,0,R,0,Math.PI*2); ctx.lineWidth=1.5; ctx.strokeStyle='rgba(0,0,0,0.3)'; ctx.stroke()
+    ctx.restore()
+  }
+
+  const row = document.getElementById('row')
+  for (const id of IDS) {
+    const fig = document.createElement('figure')
+    const c = document.createElement('canvas')
+    const pad = 16, w = ANGLES.length*(R*2+pad)+pad, h = R*2+pad*2
+    const dpr = devicePixelRatio||1
+    c.width = w*dpr; c.height = h*dpr; c.style.width = w+'px'; c.style.height = h+'px'
+    const ctx = c.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0)
+    const img = new Image()
+    img.onload = () => ANGLES.forEach((a,i)=>drawSkinned(ctx, pad+R+i*(R*2+pad), h/2, img, a))
+    img.src = `./../src/balls/${id}.svg`
+    fig.append(c)
+    const cap = document.createElement('figcaption'); cap.textContent = id; fig.append(cap)
+    row.append(fig)
+  }
+</script>
+</body></html>
